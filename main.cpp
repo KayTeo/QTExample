@@ -3,6 +3,7 @@
 #include <QQmlApplicationEngine>
 #include <QtMultimediaWidgets/QVideoWidget>
 #include <QDir>
+#include <QPushButton>
 
 int main(int argc, char *argv[])
 {
@@ -19,9 +20,15 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
 
+    /*
     engine.load(QUrl("../QTExample/main.qml"));
     engine.load(QUrl("../QTExample/main2.qml"));
     engine.load(QUrl("../QTExample/main3.qml"));
+    */
+    QPushButton button;
+    button.setText("My text");
+    button.setToolTip("A tooltip");
+    button.show();
 
     return app.exec();
 }
