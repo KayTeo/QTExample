@@ -1,5 +1,6 @@
 #include "qmediaplayer.h"
 #include <QGuiApplication>
+#include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QtMultimediaWidgets/QVideoWidget>
 #include <QDir>
@@ -10,6 +11,7 @@ int main(int argc, char *argv[])
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
+    /*
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
@@ -20,12 +22,17 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
 
-    /*
+
     engine.load(QUrl("../QTExample/main.qml"));
     engine.load(QUrl("../QTExample/main2.qml"));
     engine.load(QUrl("../QTExample/main3.qml"));
     */
+
+    QApplication app (argc, argv);
+
     QPushButton button;
+    QFont font("Courier");
+    button.setFont(font);
     button.setText("My text");
     button.setToolTip("A tooltip");
     button.show();
