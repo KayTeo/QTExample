@@ -6,6 +6,7 @@
 #include <QDir>
 #include <QPushButton>
 #include<newclass.h>
+#include <QModbusTcpClient>
 
 int main(int argc, char *argv[])
 {

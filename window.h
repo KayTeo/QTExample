@@ -11,6 +11,8 @@ public:
 
 signals:
 
+public slots:
+
 };
 
 #endif // WINDOW_H

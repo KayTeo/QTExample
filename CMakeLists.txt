@@ -62,6 +62,8 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(QTExample)
 endif()
 
+find_package(Qt6 COMPONENTS SerialBus REQUIRED)
+target_link_libraries(QTExample PRIVATE Qt6::SerialBus)
 find_package(Qt6 REQUIRED COMPONENTS Multimedia)
 target_link_libraries(QTExample PRIVATE Qt6::Multimedia)
 find_package(Qt6 REQUIRED COMPONENTS MultimediaWidgets)
